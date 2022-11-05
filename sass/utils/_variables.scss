@@ -1,0 +1,18 @@
+:root {
+    --primary-text-color: #757575;
+    --title-text-color: #212121;
+    --primary-accent-color: #2196f3;
+    --secondary-accent-color: #ffffff;
+    --buttons-color: #f5f4fa;
+}
+
+body {
+    background-color: #ffffff;
+    color: var(--primary-text-color);
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+   }
+
+   
