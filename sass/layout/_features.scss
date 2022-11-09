@@ -6,29 +6,54 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
 
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
+
   margin-bottom: 10px;
 }
 
 .features__list {
   display: flex;
+
+  @media screen and (max-width: 1199px) {
+    flex-wrap: wrap;
+  }
+
+  @include tablet {
+    margin: -15px;
+  }
 }
 
 .features__item {
-  display: inline-block;
-  width: calc(100% - 90px / 4);
-  /* outline: 2px solid tomato; */
+  display: block;
 
   &:not(:last-child) {
-    margin-right: 30px;
+    margin-bottom: 30px;
+  }
+
+  @include tablet {
+    width: calc((100% - 60px) / 2);
+    margin: 15px;
+  }
+
+  @include desktop {
+    width: calc((100% - 90px) / 4);
   }
 }
 
 .features__icon {
-  width: 270px;
-  height: 120px;
   margin-bottom: 30px;
   border-radius: 4px;
   background-color: var(--buttons-color);
 
   @extend %center-flex;
+
+  @include tablet {
+    width: 354px;
+    height: 120px;
+  }
+  @include desktop {
+    width: 270px;
+  }
 }

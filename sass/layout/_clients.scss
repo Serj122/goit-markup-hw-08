@@ -1,8 +1,10 @@
 .clients__list {
   display: flex;
+  margin: -15px;
 
-  /* margin-left: auto;
-  margin-right: auto; */
+  @media screen and (max-width: 1199px) {
+    flex-wrap: wrap;
+  }
 }
 
 .clients__item {
@@ -11,19 +13,26 @@
 
   width: 170px;
   height: 92px;
-  margin-right: 30px;
-
+  margin: 15px;
   @extend %center-flex;
 
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  &:last-child {
-    margin-right: 0px;
-  }
+  width: calc((100% - 60px) / 2);
 
   &:hover,
   &:focus {
     border: 1px solid var(--primary-accent-color);
+  }
+
+  @include tablet {
+    width: calc((100% - 90px) / 3);
+    margin: 15px;
+  }
+
+  @include desktop {
+    width: 170px;
+    height: 92px;
   }
 }
 
